@@ -1,4 +1,8 @@
-# Speech Emotion Recognition
+# Speech Emotion Recognition for ROS
+
+This repo packages the original repo for ROS. Parts had to be backported to python 2.7 (please forgive me for this atrocity). Contains no indivual ROS-Nodes. Used for [esiaf_speech_emotion_recognition](https://github.com/Slothologist/esiaf_speech_emotion_recognition).
+
+Original README as follows:
 
 This repository contains our work on Speech emotion recognition using emodb dataset. This dataset is available here [Emo-db](http://www.emodb.bilderbar.info/download/)
 
