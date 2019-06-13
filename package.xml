@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+    <name>speechemotionrecognition</name>
+    <version>1.1.0</version>
+    <description>Package to do speech emotion recognition, packaged for ros</description>
+
+    <maintainer email="rfeldh@gmail.com">Robert Feldhans</maintainer>
+    <license>MIT</license>
+    <author>harry7</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>rospy</build_depend>
+
+    <run_depend>rospy</run_depend>
+
+</package>
