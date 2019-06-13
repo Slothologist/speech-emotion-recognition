@@ -9,13 +9,13 @@ setup_args = generate_distutils_setup(
     url='http://github.com/harry-7/speech-emotion-recognition',
     license='MIT',
     install_requires=[
-        'numpy'
-        'h5py>=2.7.1'
-        'Keras>=2.1.5'
-        'scipy>=1.0.1'
-        'sklearn'
-        'speechpy>=2.2'
-        'tensorflow>=1.7.0'
+        'numpy',
+        'h5py>=2.7.1',
+        'Keras>=2.1.5',
+        'scipy>=1.0.1',
+        'sklearn',
+        'speechpy>=2.2',
+        'tensorflow>=1.7.0',
         'pandas>=0.24.0'
     ],
     author='harry7',
