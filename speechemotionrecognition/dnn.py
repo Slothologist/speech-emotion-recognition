@@ -38,7 +38,7 @@ class DNN(Model):
         self.model.add(Dense(num_classes, activation='softmax'))
         self.model.compile(loss='binary_crossentropy', optimizer='adam',
                            metrics=['accuracy'])
-        print(self.model.summary(), file=sys.stderr)
+        # print(self.model.summary(), file=sys.stderr)
         self.save_path = self.save_path or self.name + '_best_model.h5'
 
     def load_model(self, to_load):
@@ -96,7 +96,7 @@ class DNN(Model):
             sys.exit(-1)
         return np.argmax(self.model.predict(np.array([sample])))
 
-    def make_default_model(self) -> None:
+    def make_default_model(self):
         """
         Make the model with default hyper parameters
         """

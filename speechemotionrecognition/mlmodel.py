@@ -23,7 +23,7 @@ class MLModel(Model):
     def save_model(self):
         pickle.dump(self.model, open(self.save_path, "wb"))
 
-    def load_model(self, to_load: str):
+    def load_model(self, to_load):
         try:
             self.model = pickle.load(open(self.save_path, "rb"))
         except:

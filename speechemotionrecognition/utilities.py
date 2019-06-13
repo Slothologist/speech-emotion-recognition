@@ -17,8 +17,8 @@ from speechpy.feature import mfcc
 mean_signal_length = 32000  # Empirically calculated for the given data set
 
 
-def get_feature_vector_from_mfcc(file_path: str, flatten: bool,
-                                 mfcc_len: int = 39) -> np.ndarray:
+def get_feature_vector_from_mfcc(file_path, flatten,
+                                 mfcc_len = 39):
     """
     Make feature vector from MFCC for the given wav file.
 
@@ -51,9 +51,8 @@ def get_feature_vector_from_mfcc(file_path: str, flatten: bool,
     return mel_coefficients
 
 
-def get_data(data_path: str, flatten: bool = True, mfcc_len: int = 39,
-             class_labels: Tuple = ("Neutral", "Angry", "Happy", "Sad")) -> \
-        Tuple[np.ndarray, np.ndarray]:
+def get_data(data_path, flatten = True, mfcc_len = 39,
+             class_labels = ("Neutral", "Angry", "Happy", "Sad")):
     """Extract data for training and testing.
 
     1. Iterate through all the folders.

@@ -33,7 +33,7 @@ class Model(object):
         trained (bool): True if model has been trained, false otherwise.
     """
 
-    def __init__(self, save_path: str = '', name: str = 'Not Specified'):
+    def __init__(self, save_path = '', name = 'Not Specified'):
         """
         Default constructor for abstract class Model.
 
@@ -51,9 +51,9 @@ class Model(object):
         # Model has been trained or not
         self.trained = False
 
-    def train(self, x_train: numpy.ndarray, y_train: numpy.ndarray,
-              x_val: numpy.ndarray = None,
-              y_val: numpy.ndarray = None) -> None:
+    def train(self, x_train, y_train,
+              x_val = None,
+              y_val = None):
         """
         Trains the model with the given training data.
 
@@ -68,7 +68,7 @@ class Model(object):
         # child classes
         raise NotImplementedError()
 
-    def predict(self, samples: numpy.ndarray) -> Tuple:
+    def predict(self, samples):
         """
         Predict labels for given data.
 
@@ -84,7 +84,7 @@ class Model(object):
             results.append(self.predict_one(sample))
         return tuple(results)
 
-    def predict_one(self, sample) -> int:
+    def predict_one(self, sample):
         """
         Predict label of a single sample. The reason this method exists is
         because often we might want to predict label for a single sample.
@@ -100,7 +100,7 @@ class Model(object):
         # ML models and DL models predict the labels differently.
         raise NotImplementedError()
 
-    def restore_model(self, load_path: str = None) -> None:
+    def restore_model(self, load_path = None):
         """
         Restore the weights from a saved model and load them to the model.
 
@@ -116,7 +116,7 @@ class Model(object):
         self.load_model(to_load)
         self.trained = True
 
-    def load_model(self, to_load: str) -> None:
+    def load_model(self, to_load):
         """
         Load the weights from the given saved model.
 
@@ -128,7 +128,7 @@ class Model(object):
         # child classes
         raise NotImplementedError()
 
-    def save_model(self) -> None:
+    def save_model(self):
         """
         Save the model to path denoted by `save_path` instance variable.
         """
@@ -136,7 +136,7 @@ class Model(object):
         # child classes
         raise NotImplementedError()
 
-    def evaluate(self, x_test: numpy.ndarray, y_test: numpy.ndarray) -> None:
+    def evaluate(self, x_test, y_test):
         """
         Evaluate the current model on the given test data.
 
