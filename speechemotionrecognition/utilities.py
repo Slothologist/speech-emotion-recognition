@@ -8,7 +8,6 @@ files as training samples.
 """
 import os
 import sys
-from typing import Tuple
 
 import numpy as np
 import scipy.io.wavfile as wav
