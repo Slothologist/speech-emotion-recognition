@@ -13,7 +13,7 @@ setup_args = generate_distutils_setup(
         'h5py>=2.7.1',
         'Keras>=2.1.5',
         'scipy>=1.0.1,<1.3.0',
-        'sklearn',
+        'scikit-learn<0.21.0',
         'speechpy>=2.2',
         'tensorflow>=1.7.0',
         'pandas>=0.24.0'
