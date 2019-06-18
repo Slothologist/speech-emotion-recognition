@@ -15,7 +15,7 @@ setup_args = generate_distutils_setup(
         'scipy>=1.0.1,<1.3.0',
         'scikit-learn<0.21.0',
         'speechpy>=2.2',
-        'tensorflow>=1.7.0',
+        'tensorflow==1.6.0',
         'pandas>=0.24.0'
     ],
     author='harry7',
