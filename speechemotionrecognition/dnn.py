@@ -36,7 +36,7 @@ class DNN(Model):
         self.model = Sequential()
         self.make_default_model()
         self.model.add(Dense(num_classes, activation='softmax'))
-        self.model.compile(loss='binary_crossentropy', optimizer='adam',
+        self.model.compile(loss='categorical_crossentropy', optimizer='adam',
                            metrics=['accuracy'])
         # print(self.model.summary(), file=sys.stderr)
         self.save_path = self.save_path or self.name + '_best_model.h5'
@@ -94,7 +94,7 @@ class DNN(Model):
             sys.stderr.write(
                 "Model should be trained or loaded before doing predict\n")
             sys.exit(-1)
-        return np.argmax(self.model.predict(np.array([sample])))
+        return self.model.predict(np.array([sample]))[0]
 
     def make_default_model(self):
         """
